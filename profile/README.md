@@ -1,5 +1,6 @@
-# SES-Imagotag
+# SES-imagotag / Engage by VusionGroup
 
-__VUSION: The Retail IoT Revolution__
+__Technologies for Positive Commerce__
 
-Making the physical store a digital asset
+- Digitalize your shelves
+- Run digital campaigns instantly
