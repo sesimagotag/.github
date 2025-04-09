@@ -1,49 +1,88 @@
-name: 🐛 Bug Report
-description: Create a report to help us improve Engage Mediaboard Firmware
-title: 'bug: '
+name: "🐞 Bug Report"
+description: "Report a problem or unexpected behavior in this repository."
+title: "[Bug] Short description of the bug in COMPONENT"
+labels: ["bug"]
+
 body:
-  - type: dropdown
-    id: affected-versions
+  - type: markdown
     attributes:
-      label: Engage Mediaboard Firmware Version
-      description: Which version(s) of firmware does this issue impact?
-      options:
-        - develop
-        - release
-      multiple: true
-    validations:
-      required: true
-
+      value: |
+        Thanks for reporting! Please provide as much detail as possible.
   - type: textarea
-    id: current-behavior
+    id: bug-description
     attributes:
-      label: Current Behavior
-      description: A clear description of what the bug is and how it manifests.
+      label: "📝 Bug Description"
+      description: "A clear and concise description of what the bug is."
+      placeholder: "When I click the 'Save' button on the profile page, the app crashes."
     validations:
       required: true
-
-  - type: textarea
-    id: expected-behavior
-    attributes:
-      label: Expected Behavior
-      description: A clear description of what you expected to happen.
-    validations:
-      required: true
-
   - type: textarea
     id: steps-to-reproduce
     attributes:
-      label: Steps to Reproduce
-      description: Explain the steps required to reproduce this issue.
+      label: "🔄 Steps to Reproduce"
+      description: "Detail the exact steps needed to trigger the bug."
       placeholder: |
-        1. Connect to '...'
-        2. Call '...'
-        3. Observe: '...'
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
     validations:
       required: true
-
   - type: textarea
-    id: additional-information
+    id: expected-behavior
     attributes:
-      label: Additional Information
-      description: List any other information that is relevant to your issue. Stack traces, related issues, suggestions on how to fix, etc.
+      label: "✔️ Expected Behavior"
+      description: "What did you expect to happen?"
+      placeholder: "The profile should be saved, and I should see a success message."
+    validations:
+      required: true
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: "❌ Actual Behavior"
+      description: "What actually happened?"
+      placeholder: "The app closes unexpectedly / An error message appears: '...' / The data is not saved."
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: "🖥️ Environment"
+      description: "Please provide details about the environment where you encountered the bug."
+      placeholder: |
+        - OS: [e.g., Windows 11, macOS Sonoma, Ubuntu 22.04]
+        - Browser: [e.g., Chrome 123, Firefox 122] (If applicable)
+        - App Version: [e.g., v1.2.3] (If applicable)
+        - Firmware Version: [e.g., build-20250408] (If applicable)
+        - Environment: [e.g., Production, Staging, Development]
+        - Region: [e.g., US, EU, Asia] (If applicable)
+        - API Endpoint: [e.g., GET /items/{id}] (If applicable)
+        - Device: [e.g., iPhone 15 Pro, Pixel 8, Custom Hardware Rev 2] (If applicable)
+    validations:
+      required: true
+  - type: textarea
+    id: logs-screenshots
+    attributes:
+      label: "📷 Screenshots / Logs (Optional)"
+      description: "If applicable, add screenshots or relevant log output to help explain the problem. Drag & drop files here."
+      placeholder: "Paste logs here or attach files..."
+  - type: dropdown
+    id: severity
+    attributes:
+      label: "🚦 Severity (Optional)"
+      description: "How critical is this bug?"
+      options:
+        - "Critical (Blocks development/testing, production outage)"
+        - "High (Major functionality broken, no workaround)"
+        - "Medium (Minor functionality broken, workaround exists)"
+        - "Low (UI glitch, typo, cosmetic issue)"
+    validations:
+      required: false
+  - type: input
+    id: related-project-item
+    attributes:
+      label: "🔗 Link to related Project Item (Optional)"
+      description: "If this bug is directly related to a specific feature or backlog item, provide the link."
+      placeholder: "e.g., https://github.com/sesimagotag/engage/issues/40"
+    validations:
+      required: false

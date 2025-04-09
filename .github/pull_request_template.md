@@ -20,6 +20,7 @@ Fixes # (issue)
 
 **Test Configuration**:
 
+- API version:
 - Firmware version:
 - Hardware:
 - Toolchain:

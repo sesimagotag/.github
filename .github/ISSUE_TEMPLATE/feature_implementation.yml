@@ -1,0 +1,50 @@
+name: "✨ Feature Implementation"
+description: "Describe a specific task required to implement a larger feature tracked in the main project backlog."
+title: "[Feature] Implement task for COMPONENT/FEATURE"
+labels: ["feature-task"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contributing! Please provide as much detail as possible to help us understand the task.
+  - type: input
+    id: project-item-link
+    attributes:
+      label: "🔗 Link to Main Project Item"
+      description: "Provide the URL of the corresponding backlog item in the Engage project repository."
+      placeholder: "e.g., https://github.com/sesimagotag/engage/issues/40"
+    validations:
+      required: true
+  - type: textarea
+    id: task-description
+    attributes:
+      label: "📝 Task Description & Goal"
+      description: "Clearly describe the specific goal of *this* task. What needs to be built or changed in *this* repository?"
+      placeholder: |
+        Implement the API endpoint for user profile updates...
+          -- or --
+        Implement the device provisioning in for new device...
+          -- or --
+        Update the documentation for the new feature...
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: "✅ Acceptance Criteria"
+      description: "How will we know when this specific task is successfully completed? List clear criteria."
+      placeholder: |
+        - API endpoint `PUT /users/{id}/profile` exists.
+        - Endpoint accepts payload with fields X, Y, Z.
+        - Successful update returns 200 OK with updated profile.
+        - Appropriate validation errors return 400 Bad Request.
+        - Unit tests cover success and failure scenarios.
+    validations:
+      required: true
+  - type: textarea
+    id: technical-approach
+    attributes:
+      label: "💡 Technical Approach (Optional)"
+      description: "Outline the proposed technical solution, potential challenges, or considerations for this task."
+      placeholder: "Use XYZ library, modify ABC module, consider performance implications..."
