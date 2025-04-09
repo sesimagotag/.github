@@ -1,0 +1,49 @@
+name: 🐛 Bug Report
+description: Create a report to help us improve Engage Mediaboard Firmware
+title: 'bug: '
+body:
+  - type: dropdown
+    id: affected-versions
+    attributes:
+      label: Engage Mediaboard Firmware Version
+      description: Which version(s) of firmware does this issue impact?
+      options:
+        - develop
+        - release
+      multiple: true
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-behavior
+    attributes:
+      label: Current Behavior
+      description: A clear description of what the bug is and how it manifests.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: A clear description of what you expected to happen.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: Explain the steps required to reproduce this issue.
+      placeholder: |
+        1. Connect to '...'
+        2. Call '...'
+        3. Observe: '...'
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-information
+    attributes:
+      label: Additional Information
+      description: List any other information that is relevant to your issue. Stack traces, related issues, suggestions on how to fix, etc.
